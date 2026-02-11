@@ -3,7 +3,8 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  output: 'export', // Pastikan baris ini ada di dalam kurung kurawal nextConfig
+  output: 'export',
+  basePath: '/Valentine', // Tambahkan ini sesuai nama repository kamu
 };
 
 export default nextConfig;
