@@ -4,7 +4,12 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   output: 'export',
-  basePath: '/Valentine', // Tambahkan ini sesuai nama repository kamu
+  basePath: '/valentine', // Repository name in lowercase
+  trailingSlash: true, // Important for GitHub Pages routing
+  images: {
+    unoptimized: true, // Required for static exports
+  },
+  reactStrictMode: true,
 };
 
 export default nextConfig;
