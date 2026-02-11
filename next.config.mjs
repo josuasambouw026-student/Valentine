@@ -3,7 +3,7 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  output: 'export', // Pindahkan ke sini (di dalam objek)
+  output: 'export', // Pastikan baris ini ada di dalam kurung kurawal nextConfig
 };
 
 export default nextConfig;
