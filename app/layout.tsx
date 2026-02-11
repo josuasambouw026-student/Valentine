@@ -1,6 +1,7 @@
 import React from "react"
 import type { Metadata, Viewport } from 'next'
 import { Playfair_Display, Dancing_Script } from 'next/font/google'
+import { getBasePath } from '@/lib/basepath'
 
 import './globals.css'
 
@@ -41,7 +42,7 @@ export default function RootLayout({
           preload="auto"
           style={{ display: 'none' }}
         >
-          <source src="/music/love-song.mp3" type="audio/mpeg" />
+          <source src={getBasePath("/music/love-song.mp3")} type="audio/mpeg" />
         </audio>
         <script
           dangerouslySetInnerHTML={{
