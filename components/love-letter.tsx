@@ -94,14 +94,14 @@ export function LoveLetter() {
   return (
     <section
       ref={sectionRef}
-      className="flex justify-center px-4 py-16 md:px-8 md:py-24"
+      className="flex justify-center px-3 py-8 sm:px-4 sm:py-16 md:px-8 md:py-24"
     >
       <div
-        className={`relative max-w-2xl transition-all duration-1000 ease-out ${
+        className={`relative max-w-2xl w-full transition-all duration-1000 ease-out ${
           isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
         }`}
       >
-        <div className="relative rounded-sm bg-card p-8 shadow-[4px_6px_20px_rgba(0,0,0,0.1)] md:p-12">
+        <div className="relative rounded-sm bg-card p-5 shadow-[4px_6px_20px_rgba(0,0,0,0.1)] sm:p-8 md:p-12">
           {/* Decorative tape strips */}
           <div className="absolute -top-3 left-1/2 h-6 w-16 -translate-x-1/2 -rotate-2 bg-secondary/60" />
           <div className="absolute -top-2 left-[30%] h-5 w-12 -translate-x-1/2 rotate-3 bg-secondary/40" />
@@ -112,7 +112,7 @@ export function LoveLetter() {
             <div className="h-px flex-1 bg-border" />
           </div>
 
-          <h2 className="mb-8 text-center font-script text-3xl text-primary md:text-4xl">
+          <h2 className="mb-6 text-center font-script text-2xl text-primary sm:mb-8 sm:text-3xl md:text-4xl">
             A Love Letter for You
           </h2>
 
@@ -130,7 +130,7 @@ export function LoveLetter() {
               </button>
             </div>
           ) : (
-            <div className="space-y-4 font-script text-lg leading-relaxed text-foreground md:text-xl">
+            <div className="space-y-3 font-script text-base leading-relaxed text-foreground sm:space-y-4 sm:text-lg md:text-xl">
               {typedLines.map((line, i) => (
                 <p
                   key={`line-${i}`}

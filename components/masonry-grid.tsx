@@ -64,13 +64,13 @@ const memories = [
 
 export function MasonryGrid() {
   return (
-    <section className="px-4 py-8 md:px-8 lg:px-16">
-      <div className="mx-auto mb-10 max-w-md text-center">
+    <section className="px-3 py-6 sm:px-4 sm:py-8 md:px-8 lg:px-16">
+      <div className="mx-auto mb-8 max-w-md text-center">
         <p className="font-sans text-xs tracking-[0.3em] text-muted-foreground uppercase md:text-sm">
           Tap a card to flip it over
         </p>
       </div>
-      <div className="columns-2 gap-4 md:columns-3 md:gap-6 lg:columns-4 lg:gap-8">
+      <div className="columns-1 gap-3 sm:columns-2 sm:gap-4 md:columns-3 md:gap-6 lg:columns-4 lg:gap-8">
         {memories.map((memory, i) => (
           <PolaroidCard
             key={memory.src}

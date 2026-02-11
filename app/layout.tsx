@@ -37,30 +37,13 @@ export default function RootLayout({
       <body className={`${playfair.variable} ${dancing.variable} font-sans antialiased`}>
         <audio
           id="background-music"
-          autoPlay
           loop
           preload="auto"
           style={{ display: 'none' }}
+          crossOrigin="anonymous"
         >
           <source src={getBasePath("/music/love-song.mp3")} type="audio/mpeg" />
         </audio>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                const audio = document.getElementById('background-music');
-                if (audio) {
-                  audio.volume = 0.3;
-                  audio.play().catch(() => {
-                    document.addEventListener('click', () => {
-                      audio.play().catch(() => {});
-                    }, { once: true });
-                  });
-                }
-              })();
-            `,
-          }}
-        />
         {children}
       </body>
     </html>
